@@ -11,9 +11,9 @@ public class practicatresAlex1 {
         double pesominimo;
         double totalpeso;
         double pesomax;
-        double pesomaxconst = 120;
-        double alturamaxconst = 230;
-        double alturaminconst = 140;
+        final double PESOMAXCONST = 120;
+        final double ALTURAMAXCONST = 230;
+        final double ALTURAMINCONST = 140;
         System.out.println("------------------------------");
         System.out.println("***Bienvenido al raton jugueton***");
         System.out.println("------------------------------");
@@ -26,15 +26,15 @@ public class practicatresAlex1 {
                 return;
             }
             System.out.println("leyendo altura (cm) ......");
-            if (altura > alturamaxconst || altura <= 0) {
+            if (altura > ALTURAMAXCONST || altura <= 0) {
                 System.out.println("Error de lectura, baja de la bascula y vuelve a subir...");
-            } else if (altura < alturaminconst) {
-                double diferenciacm = alturaminconst - altura;
+            } else if (altura < ALTURAMINCONST) {
+                double diferenciacm = ALTURAMINCONST - altura;
                 System.out.println("para subir a la atraccion te faltan: " + diferenciacm + "cm");
             } else {
                 System.out.println("altura correcta");
             }
-        } while (altura > alturamaxconst || altura <= 0 || altura < alturaminconst);
+        } while (altura > ALTURAMAXCONST || altura <= 0 || altura < ALTURAMINCONST);
         do {
             try {
                 System.out.println("introduce tu peso");
@@ -50,8 +50,8 @@ public class practicatresAlex1 {
             } else if (peso < pesominimo) {
                 totalpeso = pesominimo - peso;
                 System.out.println("Lo siento, no superas el peso minimo, te faltan " + totalpeso + " kg para subir a la atraccion");
-            } else if (peso > pesomaxconst) {
-                pesomax = peso - pesomaxconst;
+            } else if (peso > PESOMAXCONST) {
+                pesomax = peso - PESOMAXCONST;
                 System.out.println("Lo siento, sobrepasas en " + pesomax + " kg el limite de la atraccion");
 
             } else {
